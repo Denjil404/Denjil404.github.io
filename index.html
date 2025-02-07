@@ -5,17 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
-        h1 { color: #333; }
-        .projects { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .project { border: 1px solid #ddd; padding: 20px; border-radius: 10px; width: 300px; }
-        a { text-decoration: none; color: #007bff; }
+        /* Background with gradient */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1e3c72, #2a5298); /* Blue gradient */
+            color: white;
+            text-align: center;
+        }
+
+        /* Banner styling */
+        .banner {
+            width: 100%;
+            height: 200px;
+            background: url('images/banner.jpg') center/cover no-repeat; /* Replace with your banner image */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Divider box styling */
+        .divider {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .divider button {
+            background: #ffd700; /* Gold */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #1e3c72; /* Dark blue */
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .divider button:hover {
+            background: #ffcc00;
+        }
+
+        /* Project container */
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        /* Individual project box */
+        .project {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Links */
+        a {
+            text-decoration: none;
+            color: #ffd700; /* Gold */
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ffcc00;
+        }
     </style>
 </head>
 <body>
-    <h1>My Game Development Portfolio</h1>
-    <p>Welcome to my portfolio! Here are some of my projects:</p>
-    
+
+    <!-- Banner Section -->
+    <div class="banner">
+        My Game Development Portfolio
+    </div>
+
+    <!-- Divider Box with Buttons -->
+    <div class="divider">
+        <button onclick="location.href='page1.html'">Page 1</button>
+        <button onclick="location.href='page2.html'">Page 2</button>
+        <button onclick="location.href='page3.html'">Page 3</button>
+    </div>
+
+    <!-- Project Section -->
     <div class="projects">
         <div class="project">
             <h2>Game Title 1</h2>
@@ -28,5 +115,6 @@
             <a href="https://yourgame.itch.io/">View on Itch.io</a>
         </div>
     </div>
+
 </body>
 </html>
