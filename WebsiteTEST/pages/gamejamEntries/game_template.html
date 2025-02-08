@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .header {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px; /* Increased space between description and slideshow */
+        }
+
+        .slideshow-container {
+            width: 100%;
+            max-width: 800px; /* Match the max-width of the header */
+            position: relative;
+            margin: auto;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slides img {
+            width: 100%;
+            max-height: 450px; /* Set a max height to match the description box */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ccc; /* Placeholder border */
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            user-select: none;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: translateY(-50%);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="game-name"></h1>
+            <div class="description" id="game-description"></div>
+        </div>
+
+        <div class="slideshow-container" id="slideshow-container">
+            <!-- Slides will be inserted here by JavaScript -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const gameId = urlParams.get('id');
+
+            fetch('../../data/games.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const game = data.games.find(g => g.id === gameId);
+                    if (game) {
+                        document.getElementById('game-name').textContent = game.name;
+                        document.getElementById('game-description').textContent = game.description;
+
+                        const slideshowContainer = document.getElementById('slideshow-container');
+                        game.images.forEach((image, index) => {
+                            const slideDiv = document.createElement('div');
+                            slideDiv.className = 'slides';
+                            if (index === 0) slideDiv.style.display = 'block';
+
+                            const img = document.createElement('img');
+                            img.src = image;
+                            img.alt = `Screenshot ${index + 1}`;
+
+                            slideDiv.appendChild(img);
+                            slideshowContainer.insertBefore(slideDiv, slideshowContainer.firstChild);
+                        });
+
+                        showSlides(slideIndex);
+                    } else {
+                        document.getElementById('game-name').textContent = 'Game not found';
+                        document.getElementById('game-description').textContent = '';
+                    }
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                    document.getElementById('game-name').textContent = 'Error loading game data';
+                    document.getElementById('game-description').textContent = '';
+                });
+        });
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
