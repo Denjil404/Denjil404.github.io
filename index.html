@@ -76,8 +76,8 @@
 
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Create three columns */
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 15px 15px; 
         }
 
         .project-card {
@@ -90,6 +90,8 @@
             transition: transform 0.2s; /* Add transition for hover effect */
             position: relative; /* Ensure cards have a higher z-index */
             z-index: 2;
+            width: 315px; /* Fixed width */
+            height: 300px; /* Increased height to make room for description */
         }
 
         .project-card:hover {
@@ -99,16 +101,31 @@
 
         .project-card img {
             width: 100%;
-            height: 200px;
+            height: 200px; /* Fixed height for images */
             object-fit: cover;
             border-bottom: 1px solid #ccc; /* Add border to bottom of image */
             margin-bottom: 10px; /* Add space between image and text */
         }
 
+        .project-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 0 10px;
+        }
+
+        .project-info .name {
+            text-align: left;
+        }
+
+        .project-info .date {
+            text-align: right;
+        }
+
         .project-text {
             color: #666;
-            margin-bottom: 30px;
-            text-decoration: none; 
+            margin-bottom: 10px; /* Adjust margin for description */
+            text-decoration: none; /* Remove underline */
         }
 
         .project-card a {
@@ -181,27 +198,73 @@
             <div class="project-grid">
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game1">
-                        <img src="WebsiteTEST/images/1.jpg" alt="Project 1">
+                        <img src="WebsiteTEST/images/TS1.png" alt="Project 1">
                     </a>
-                    <div class="project-text">1</div>
+                    <div class="project-info">
+                        <div class="name">Project 1</div>
+                        <div class="date">Jul 2023</div>
+                    </div>
+                    <div class="project-text">Defend the HQ of the "Player" against a horde of mechanic Enemies. Use your ability to possess Towers.</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game2">
-                        <img src="WebsiteTEST/images/2.jpg" alt="Project 2">
+                        <img src="WebsiteTEST/images/EGG1.png" alt="Project 2">
                     </a>
+                    <div class="project-info">
+                        <div class="name">Project 2</div>
+                        <div class="date">Nov 2022</div>
+                    </div>
                     <div class="project-text">2</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game3">
-                        <img src="WebsiteTEST/images/3.jpg" alt="Project 3">
+                        <img src="WebsiteTEST/images/MECH1.png" alt="Project 3">
                     </a>
+                    <div class="project-info">
+                        <div class="name">Project 3</div>
+                        <div class="date">Jul 2022</div>
+                    </div>
                     <div class="project-text">3</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game4">
-                        <img src="WebsiteTEST/images/4.jpg" alt="Project 4">
+                        <img src="WebsiteTEST/images/DICE1.png" alt="Project 4">
                     </a>
+                    <div class="project-info">
+                        <div class="name">Project 4</div>
+                        <div class="date">Jul 2022</div>
+                    </div>
                     <div class="project-text">4</div>
+                </div>
+                <div class="project-card">
+                    <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game5">
+                        <img src="WebsiteTEST/images/ROAD1.png" alt="Project 5">
+                    </a>
+                    <div class="project-info">
+                        <div class="name">Project 5</div>
+                        <div class="date">Apr 2022</div>
+                    </div>
+                    <div class="project-text">5</div>
+                </div>
+                <div class="project-card">
+                    <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game6">
+                        <img src="WebsiteTEST/images/BL1.png" alt="Project 6">
+                    </a>
+                    <div class="project-info">
+                        <div class="name">Project 6</div>
+                        <div class="date">Feb 2022</div>
+                    </div>
+                    <div class="project-text">6</div>
+                </div>
+                <div class="project-card">
+                    <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game7">
+                        <img src="WebsiteTEST/images/CD1.png" alt="Project 7">
+                    </a>
+                    <div class="project-info">
+                        <div class="name">Project 7</div>
+                        <div class="date">Jun 2021</div>
+                    </div>
+                    <div class="project-text">7</div>
                 </div>
             </div>
         </section>
@@ -211,20 +274,42 @@
             <div class="project-grid">
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=project1">
-                        <img src="WebsiteTEST/images/5.jpg" alt="Project 1">
+                        <img src="WebsiteTEST/images/vr1cropped.jpg" alt="Project 1">
                     </a>
-                    <div class="project-text">1</div>
+                    <div class="project-info">
+                        <div class="name">Experimental Game Design</div>
+                        <div class="date">Dez 2024</div>
+                    </div>
+                    <div class="project-text">VR</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=project2">
-                        <img src="WebsiteTEST/images/6.jpg" alt="Project 2">
+                        <img src="WebsiteTEST/images/worm1.jpg" alt="Project 2">
                     </a>
+                    <div class="project-info">
+                        <div class="name">Game Prototype</div>
+                        <div class="date">Jul 2024</div>
+                    </div>
                     <div class="project-text">2</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=project3">
-                        <img src="WebsiteTEST/images/7.jpg" alt="Project 3">
+                        <img src="WebsiteTEST/images/art1.jpg" alt="Project 3">
                     </a>
+                    <div class="project-info">
+                        <div class="name">Game Art</div>
+                        <div class="date">Jan 2024</div>
+                    </div>
+                    <div class="project-text">3</div>
+                </div>
+                <div class="project-card">
+                    <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=project4">
+                        <img src="WebsiteTEST/images/art1.jpg" alt="Project 3">
+                    </a>
+                    <div class="project-info">
+                        <div class="name">Game Art</div>
+                        <div class="date">Jan 2024</div>
+                    </div>
                     <div class="project-text">3</div>
                 </div>
             </div>
@@ -237,18 +322,30 @@
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=prototype1">
                         <img src="WebsiteTEST/images/8.jpg" alt="Project 1">
                     </a>
+                    <div class="project-info">
+                        <div class="name">Project 1</div>
+                        <div class="date">Nov 2025</div>
+                    </div>
                     <div class="project-text">1</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=prototype2">
                         <img src="WebsiteTEST/images/9.jpg" alt="Project 2">
                     </a>
+                    <div class="project-info">
+                        <div class="name">Project 2</div>
+                        <div class="date">Dec 2025</div>
+                    </div>
                     <div class="project-text">2</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=prototype3">
                         <img src="WebsiteTEST/images/10.jpg" alt="Project 3">
                     </a>
+                    <div class="project-info">
+                        <div class="name">Project 3</div>
+                        <div class="date">Jan 2026</div>
+                    </div>
                     <div class="project-text">3</div>
                 </div>
             </div>
