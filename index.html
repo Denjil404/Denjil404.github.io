@@ -75,12 +75,13 @@
         }
 
         .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Flexible columns */
-            gap: 25px; /* Adjust gap between cards */
-            padding: 0 10px; /* Add padding to the left and right */
-            justify-content: center; /* Center the grid items */
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* Flexible columns */
+        gap: 25px; /* Adjust gap between cards */
+        padding: 0 50px; /* Add padding to the left and right */
+        justify-content: center; 
+        direction: ltr;
+}
 
         .project-card {
             text-align: center;
@@ -144,41 +145,74 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5em;
-            }
-            
-            .section {
-                margin: 10px -80px 0px -80px;
-                padding: 20px; /* Adjust padding for smaller screens */
-            }
-
-            .project-grid {
-                padding: 0 10px; /* Add padding to the left and right */
-            }
-
-            .project-card {
-                width: 100%; /* Adjust width to fill the screen */
-                height: auto; /* Adjust height to fit content */
-            }
-
-            .project-card img {
-                height: auto; /* Adjust height to fit content */
-                width: auto;
-            }
+        .hero h1 {
+            font-size: 2.5em;
+        }
+    
+        .section {
+        margin: 10px 0;
+        padding: 20px; /* Adjust padding for smaller screens */
+        width: 100%; /* Ensure the section takes full width */
         }
 
-        @media (max-width: 480px) {
-            .section {
-                margin: 10px;
-                padding: 10px; /* Further adjust padding for very small screens */
-            }
-
-            .project-card {
-                width: auto;
-                height: auto; /* Adjust height to fit content */
-            }
+        .project-grid {
+        padding: 0 10px; /* Reduce side padding */
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Ensure full width on small screens */
         }
+
+        .project-card {
+        width: 100%; /* Ensure cards fill the available space */
+        height: auto;
+        margin-bottom: 15px; /* Add margin between cards */
+        }
+
+        .project-card img {
+        width: 100%; /* Ensure images stretch with the card */
+        height: auto; /* Maintain aspect ratio */
+        }
+        .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centers vertically */
+        align-items: center; /* Centers horizontally */
+        text-align: center; /* Ensures text alignment */
+        padding: 20px;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+        text-align: center;
+        margin: 0 auto; /* Centers if it's a block element */
+        max-width: 90%; /* Prevents overflow */
+    }
+
+    }
+
+        @media (max-width: 390px) {
+        .section {
+        margin: 10px 0;
+        padding: 10px; /* Adjust padding */
+        width: 100%;
+        }
+
+        .project-grid {
+        padding: 0; /* Remove padding to ensure full width */
+        }
+
+        .project-card {
+        width: 100%; /* Ensure full width */
+        height: auto;
+        margin-bottom: 15px;
+        }
+
+        .project-card img {
+        width: 100%; /* Ensure images also fill the width */
+        height: auto;
+        }
+    }
+
+        
 
         .content {
             flex: 1;
