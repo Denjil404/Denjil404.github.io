@@ -5,9 +5,10 @@
             "name": "Tower Swapper",
             "description": "This is a brief description of Game 1. It provides an overview of the game's storyline, features, and gameplay mechanics.",
             "images": [
-                "../../images/1.jpg",
-                "../../images/1.jpg",
-                "../../images/1.jpg"
+                "../../images/TS3.JPG",
+                "../../images/TS2.jpg",
+                "../../images/TS5.jpg"
+                
             ]
         },
         {
@@ -25,9 +26,10 @@
             "name": "Mech Delivery Mayhem",
             "description": "This is a brief description of Game 3. It provides an overview of the game's storyline, features, and gameplay mechanics.",
             "images": [
-                "../../images/7.jpg",
-                "../../images/8.jpg",
-                "../../images/9.jpg"
+                "../../images/MECH2.png",
+                "../../images/MECH3.gif",
+                "../../images/MECH4.png",
+                "../../images/MECH5.png"
             ]
         },
         {
@@ -35,9 +37,10 @@
             "name": "Night of the Dice",
             "description": "This is a brief description of Game 4. It provides an overview of the game's storyline, features, and gameplay mechanics.",
             "images": [
-                "../../images/10.jpg",
-                "../../images/11.jpg",
-                "../../images/12.jpg"
+                "../../images/DICE2.png",
+                "../../images/DICE3.png",
+                "../../images/DICE4.png",
+                "../../images/DICE5.png"
             ]
         },
         {
@@ -45,9 +48,9 @@
             "name": "Wrong Road",
             "description": "This is a brief description of Game 4. It provides an overview of the game's storyline, features, and gameplay mechanics.",
             "images": [
-                "../../images/10.jpg",
-                "../../images/11.jpg",
-                "../../images/12.jpg"
+                "../../images/ROAD2.png",
+                "../../images/ROAD3.png",
+                "../../images/ROAD4.png"
             ]
         },
         {
@@ -55,9 +58,10 @@
             "name": "Burning Light",
             "description": "This is a brief description of Game 4. It provides an overview of the game's storyline, features, and gameplay mechanics.",
             "images": [
-                "../../images/10.jpg",
-                "../../images/11.jpg",
-                "../../images/12.jpg"
+                "../../images/BL2.png",
+                "../../images/BL3.png",
+                "../../images/BL4.gif",
+                "../../images/BL5.png"
             ]
         },
         {
@@ -65,9 +69,11 @@
             "name": "Cultist Deal",
             "description": "This is a brief description of Game 4. It provides an overview of the game's storyline, features, and gameplay mechanics.",
             "images": [
-                "../../images/10.jpg",
-                "../../images/11.jpg",
-                "../../images/12.jpg"
+                "../../images/CD2.png",
+                "../../images/CD2.png",
+                "../../images/CD3.png",
+                "../../images/CD4.png",
+                "../../images/CD5.gif"
             ]
         },
         {
@@ -75,9 +81,12 @@
             "name": "Night Of Demise",
             "description": "This is a brief description of Project 1. It provides an overview of the project's goals, features, and outcomes.",
             "images": [
-                "../../images/13.jpg",
-                "../../images/14.jpg",
-                "../../images/15.jpg"
+                "../../images/VR2.png",
+                "../../images/V3.png",
+                "../../images/V4.png",
+                "../../images/VR5.png",
+                "../../images/VR6.png",
+                "../../images/VR7.png"
             ]
         },
         {
@@ -85,9 +94,12 @@
             "name": "Worm eats World",
             "description": "This is a brief description of Project 2. It provides an overview of the project's goals, features, and outcomes.",
             "images": [
-                "../../images/16.jpg",
-                "../../images/17.jpg",
-                "../../images/18.jpg"
+                "../../images/worm2.png",
+                "../../images/worm3.png",
+                "../../images/worm4.png",
+                "../../images/worm5.png",
+                "../../images/worm6.png"
+                
             ]
         },
         {
@@ -95,9 +107,10 @@
             "name": "GameArt Project",
             "description": "This is a brief description of Project 3. It provides an overview of the project's goals, features, and outcomes.",
             "images": [
-                "../../images/19.jpg",
-                "../../images/20.jpg",
-                "../../images/21.jpg"
+                "../../images/art2.png",
+                "../../images/art3.png",
+                "../../images/art4.png",
+                "../../images/art5.png"
             ]
         },
         {
