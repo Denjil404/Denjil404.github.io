@@ -145,71 +145,77 @@
         }
 
         @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 2.5em;
-        }
-    
-        .section {
-        margin: 10px 0;
-        padding: 20px; /* Adjust padding for smaller screens */
-        width: 100%; /* Ensure the section takes full width */
-        }
-
-        .project-grid {
-        padding: 0 10px; /* Reduce side padding */
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Ensure full width on small screens */
-        }
-
-        .project-card {
-        width: 100%; /* Ensure cards fill the available space */
-        height: auto;
-        margin-bottom: 15px; /* Add margin between cards */
-        }
-
-        .project-card img {
-        width: 100%; /* Ensure images stretch with the card */
-        height: auto; /* Maintain aspect ratio */
-        }
-        .hero {
+    .hero {
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Centers vertically */
-        align-items: center; /* Centers horizontally */
-        text-align: center; /* Ensures text alignment */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         padding: 20px;
         width: 100%;
     }
 
     .hero h1 {
-        font-size: 2.5em;
-        text-align: center;
-        margin: 0 auto; /* Centers if it's a block element */
-        max-width: 90%; /* Prevents overflow */
+        font-size: clamp(1.8em, 5vw, 2.5em); /* Dynamically scales text */
+        margin: 0 auto;
+        max-width: 90%;
     }
 
-    }
-
-        @media (max-width: 390px) {
-        .section {
+    .section {
         margin: 10px 0;
-        padding: 10px; /* Adjust padding */
+        padding: 20px;
         width: 100%;
-        }
+    }
 
-        .project-grid {
-        padding: 0; /* Remove padding to ensure full width */
-        }
+    .project-grid {
+        padding: 0 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 40vw, 400px), 1fr)); /* Dynamically adjusts */
+        gap: 15px;
+    }
 
-        .project-card {
-        width: 100%; /* Ensure full width */
+    .project-card {
+        width: 100%;
+        max-width: max(250px, 40vw); /* Prevents shrinking */
+        height: auto;
+        margin: 0 auto 15px;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 390px) {
+    .section {
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .project-grid {
+        padding: 0;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Ensure full width on very small screens */
+    }
+
+    .project-card {
+        width: 100%;
         height: auto;
         margin-bottom: 15px;
-        }
+    }
 
-        .project-card img {
-        width: 100%; /* Ensure images also fill the width */
+    .project-card img {
+        width: 100%;
         height: auto;
-        }
+    }
+
+    .hero h1 {
+        font-size: clamp(1.6em, 6vw, 2em);
+        max-width: 90%;
+    }
+}
+
     }
 
         
