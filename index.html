@@ -144,7 +144,7 @@
             color: white;
         }
 
-@media (max-width: 768px) {
+        @media (max-width: 768px) {
     .hero {
         display: flex;
         flex-direction: column;
@@ -168,16 +168,16 @@
     }
 
     .project-grid {
-        padding: 0 10px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 40vw, 400px), 1fr)); /* Dynamically adjusts */
+        grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 40vw, 400px), 1fr)); /* Improved responsiveness */
         gap: 15px;
+        padding: 0 10px;
+        justify-content: center; /* Ensures even alignment */
     }
 
     .project-card {
         width: 100%;
-        
-        max-width: min(100%, 400px); /* Prevents shrinking */
+        max-width: 400px; /* Prevents excessive shrinking */
         height: auto;
         margin: 0 auto 15px;
     }
@@ -185,6 +185,7 @@
     .project-card img {
         width: 100%;
         height: auto;
+        display: block; /* Ensures Firefox compatibility */
     }
 }
 
@@ -197,7 +198,7 @@
 
     .project-grid {
         padding: 0;
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Ensure full width on very small screens */
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Ensures full width on very small screens */
     }
 
     .project-card {
@@ -216,6 +217,7 @@
         max-width: 90%;
     }
 }
+
 
         .content {
             flex: 1;
