@@ -45,7 +45,7 @@
         .section {
             background-color: white;
             padding: 30px;
-            margin: 20px;
+            margin: 0px 100px 50px 100px;
             border-radius: 18px;
             box-shadow: 0 6px 8px rgba(0,0,0,0.1);
             opacity: 0;
@@ -55,7 +55,7 @@
         }
 
         .section h2 {
-            margin-bottom: 20px; /* Add margin to section titles */
+            margin-bottom: 50px; /* Add margin to section titles */
         }
 
         #about {
@@ -76,22 +76,24 @@
 
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); 
-            gap: 15px 15px; 
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Flexible columns */
+            gap: 25px; /* Adjust gap between cards */
+            padding: 0 10px; /* Add padding to the left and right */
+            justify-content: center; /* Center the grid items */
         }
 
         .project-card {
             text-align: center;
             border: 1px solid #ccc; /* Add border */
             border-radius: 10px;
-            padding: 10px;
+            padding: 0px;
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s; /* Add transition for hover effect */
             position: relative; /* Ensure cards have a higher z-index */
             z-index: 2;
-            width: 315px; /* Fixed width */
-            height: 300px; /* Increased height to make room for description */
+            height: 500px; /* Fixed height */
+            width: 450px; /* Fixed width */
         }
 
         .project-card:hover {
@@ -101,16 +103,15 @@
 
         .project-card img {
             width: 100%;
-            height: 200px; /* Fixed height for images */
+            height: 100%;
             object-fit: cover;
             border-bottom: 1px solid #ccc; /* Add border to bottom of image */
-            margin-bottom: 10px; /* Add space between image and text */
         }
 
         .project-info {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 10px;
+            margin: 10px 5px 15px 5px; /* Increase margin to add space between image and project info */
             padding: 0 10px;
         }
 
@@ -124,8 +125,9 @@
 
         .project-text {
             color: #666;
-            margin-bottom: 10px; /* Adjust margin for description */
+            margin-bottom: 50px; /* Adjust margin for description */
             text-decoration: none; /* Remove underline */
+            padding: 0 10px; /* Add padding for text */
         }
 
         .project-card a {
@@ -146,17 +148,34 @@
                 font-size: 2.5em;
             }
             
-            section {
-                margin: 10px;
+            .section {
+                margin: 10px -80px 0px -80px;
+                padding: 20px; /* Adjust padding for smaller screens */
             }
 
             .project-grid {
-                grid-template-columns: repeat(1, 1fr); /* Adjust to one column on smaller screens */
-                justify-items: center; /* Center the cards */
+                padding: 0 10px; /* Add padding to the left and right */
             }
 
             .project-card {
-                width: 90%; /* Adjust width to fit within the screen */
+                width: 100%; /* Adjust width to fill the screen */
+                height: auto; /* Adjust height to fit content */
+            }
+
+            .project-card img {
+                height: auto; /* Adjust height to fit content */
+                width: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                margin: 10px;
+                padding: 10px; /* Further adjust padding for very small screens */
+            }
+
+            .project-card {
+                width: auto;
                 height: auto; /* Adjust height to fit content */
             }
         }
@@ -220,7 +239,7 @@
                         <div class="name">Project 2</div>
                         <div class="date">Nov 2022</div>
                     </div>
-                    <div class="project-text">2</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game3">
@@ -230,7 +249,7 @@
                         <div class="name">Project 3</div>
                         <div class="date">Jul 2022</div>
                     </div>
-                    <div class="project-text">3</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game4">
@@ -240,7 +259,7 @@
                         <div class="name">Project 4</div>
                         <div class="date">Jul 2022</div>
                     </div>
-                    <div class="project-text">4</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game5">
@@ -250,8 +269,9 @@
                         <div class="name">Project 5</div>
                         <div class="date">Apr 2022</div>
                     </div>
-                    <div class="project-text">5</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
+
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game6">
                         <img src="WebsiteTEST/images/BL1.png" alt="Project 6">
@@ -260,8 +280,9 @@
                         <div class="name">Project 6</div>
                         <div class="date">Feb 2022</div>
                     </div>
-                    <div class="project-text">6</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
+
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=game7">
                         <img src="WebsiteTEST/images/CD1.png" alt="Project 7">
@@ -270,7 +291,7 @@
                         <div class="name">Project 7</div>
                         <div class="date">Jun 2021</div>
                     </div>
-                    <div class="project-text">7</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
             </div>
         </section>
@@ -280,23 +301,24 @@
             <div class="project-grid">
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=project1">
-                        <img src="WebsiteTEST/images/vr1cropped.jpg" alt="Project 1">
+                        <img src="WebsiteTEST/images/vr1cropped.jpg" alt="Project 8">
                     </a>
                     <div class="project-info">
                         <div class="name">Experimental Game Design</div>
                         <div class="date">Dez 2024</div>
                     </div>
-                    <div class="project-text">VR</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
+
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=project2">
-                        <img src="WebsiteTEST/images/worm1.jpg" alt="Project 2">
+                        <img src="WebsiteTEST/images/worm1.jpg" alt="Project 9">
                     </a>
                     <div class="project-info">
                         <div class="name">Game Prototype</div>
                         <div class="date">Jul 2024</div>
                     </div>
-                    <div class="project-text">2</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=project3">
@@ -306,7 +328,7 @@
                         <div class="name">Game Art</div>
                         <div class="date">Jan 2024</div>
                     </div>
-                    <div class="project-text">3</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=project4">
@@ -316,7 +338,7 @@
                         <div class="name">Game Art</div>
                         <div class="date">Jan 2024</div>
                     </div>
-                    <div class="project-text">3</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
             </div>
         </section>
@@ -326,33 +348,33 @@
             <div class="project-grid">
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=prototype1">
-                        <img src="WebsiteTEST/images/8.jpg" alt="Project 1">
+                        <img src="WebsiteTEST/images/art1.jpg" alt="Project 1">
                     </a>
                     <div class="project-info">
                         <div class="name">Project 1</div>
                         <div class="date">Nov 2025</div>
                     </div>
-                    <div class="project-text">1</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=prototype2">
-                        <img src="WebsiteTEST/images/9.jpg" alt="Project 2">
+                        <img src="WebsiteTEST/images/art1.jpg" alt="Project 2">
                     </a>
                     <div class="project-info">
                         <div class="name">Project 2</div>
                         <div class="date">Dec 2025</div>
                     </div>
-                    <div class="project-text">2</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
                 <div class="project-card">
                     <a href="WebsiteTEST/pages/gamejamEntries/game_template.html?id=prototype3">
-                        <img src="WebsiteTEST/images/10.jpg" alt="Project 3">
+                        <img src="WebsiteTEST/images/art1.jpg" alt="Project 3">
                     </a>
                     <div class="project-info">
                         <div class="name">Project 3</div>
                         <div class="date">Jan 2026</div>
                     </div>
-                    <div class="project-text">3</div>
+                    <div class="project-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
                 </div>
             </div>
         </section>
