@@ -11,7 +11,7 @@
             box-sizing: border-box;
             font-family: 'Arial', sans-serif;
 
-        body {
+            body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -19,7 +19,7 @@
             background-color: #f5f5f5;
             color: #333;
             font-family: 'Arial', sans-serif;
-        }
+            }
 
         .hero {
             background-image: url('path/to/your/image.jpg');
@@ -80,7 +80,7 @@
         padding: 0 50px; /* Add padding to the left and right */
         justify-content: center; 
         direction: ltr;
-}
+        }
 
         .project-card {
             text-align: center;
@@ -142,8 +142,8 @@
             background-color: #333;
             color: white;
         }
-
-        @media (max-width: 768px) {
+        }
+    @media (max-width: 768px) {  
     .hero {
         display: flex;
         flex-direction: column;
@@ -155,48 +155,52 @@
     }
 
     .hero h1 {
-        font-size: clamp(1.8em, 5vw, 2.5em); /* Dynamically scales text */
+        font-size: clamp(1.8em, 5vw, 3.5em);
         margin: 0 auto;
         max-width: 90%;
     }
 
     .section {
-        margin: 10px 0;
+        margin: 20px 0; /* Adds vertical space between sections */
         padding: 20px;
-        width: 100%;
-        min-width: 315px;
+        width: calc(100% - 20px); /* Ensures full width with a small gap */
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .project-grid {
-        padding: 0 10px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 40vw, 400px), 1fr)); /* Dynamically adjusts */
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ensures proper scaling */
         gap: 15px;
+        padding: 0 10px;
+        justify-content: center;
     }
 
     .project-card {
         width: 100%;
-        max-width: min(100%, 400px); /* Prevents shrinking */
+        max-width: 100%; /* Ensures cards fill available space */
         height: auto;
         margin: 0 auto 15px;
     }
-
+    
     .project-card img {
         width: 100%;
         height: auto;
+        display: block; /* Ensures proper rendering on Firefox */
     }
-}
-
-@media (max-width: 390px) {
+    }
+    @media (max-width: 390px) {
     .section {
-        margin: 10px 0;
+        margin: 20px 0;
         padding: 10px;
-        width: 100%;
+        width: calc(100% - 10px); /* Fills screen with a small margin */
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .project-grid {
         padding: 0;
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Ensure full width on very small screens */
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Ensures images take full width */
     }
 
     .project-card {
@@ -214,16 +218,12 @@
         font-size: clamp(1.6em, 6vw, 2em);
         max-width: 90%;
     }
-}
-
     }
 
-        
-
-        .content {
+    .content {
             flex: 1;
             padding-top: 60px; /* Adjust based on header height */
-            padding: 80px;
+            padding: 80px 10px;
         }
 
         @keyframes fadeIn {
@@ -242,7 +242,14 @@
             width: 40px;
             height: 40px;
         }
-    </style>
+
+
+
+
+</style>
+
+
+
 </head>
 <body>
     
