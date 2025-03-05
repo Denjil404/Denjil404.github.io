@@ -3,28 +3,29 @@
         {
             "id": "game1",
             "name": "Tower Swapper",
-            "description": "This is a brief description of Game 1. It provides an overview of the game's storyline, features, and gameplay mechanics.",
+            "description": "**Created for:** GMTK Game Jam 2023 (48-hour development)\n**Theme:** Roles Reversed\n**Team Size:** 2\n**My Contributions:** Game Design, Level Design, Programming, UI, Testing\n\nTower Swapper is a unique twist on the tower defense genre, where roles are reversed. Instead of placing towers, you take control of them in first-person mode to defend the base of a computer-controlled 'player'. The AI-controlled player earns currency from your successful eliminations and strategically places and upgrades towers from a selection of four different types to counter incoming enemies.",
             "images": [
                 "../../images/TS3.JPG",
                 "../../images/TS2.jpg",
                 "../../images/TS5.jpg"
-                
             ]
         },
         {
             "id": "game2",
             "name": "Eggmaggedon",
-            "description": "This is a brief description of Game 2. It provides an overview of the game's storyline, features, and gameplay mechanics.",
+            "description": "**Created for:** Mini Jam 119 (~72-hour development)\n**Theme:** Heaven (Everything Can Die)\n**Team Size:** 5\n**My Contributions:** Design and Functionality of Menus and UI, Game Design, Testing\n\nThe end is near—meteors rain from the sky, and chaos unfolds. As the Egg Harbinger, your sacred duty is to collect untainted souls and guide them to heaven. Use your dash to break through obstacles, chain soul collections in rapid succession, and rack up style points to boost your combo multiplier. Race against time, refine your strategy, and tweak the settings to unleash even more destruction in your quest for salvation.  ",
             "images": [
-                "../../images/4.jpg",
-                "../../images/5.jpg",
-                "../../images/6.jpg"
+                "../../images/EGG6.png",
+                "../../images/EGG5.png",
+                "../../images/EGG4.png",
+                "../../images/EGG3.png",
+                "../../images/EGG2.png"
             ]
         },
         {
             "id": "game3",
             "name": "Mech Delivery Mayhem",
-            "description": "This is a brief description of Game 3. It provides an overview of the game's storyline, features, and gameplay mechanics.",
+            "description": "**Created for:** MechJam III (~7 days development)\n**Theme:** Mechs (Retro)\n**Team Size:** 4\n**My Contributions:** Programming, Game Design, UI, Testing\n\nIn Mech Delivery Mayhem, you control a massive mech equipped with powerful lasers, and your mission is simple: reach each delivery destination as quickly as possible to pay your weekly rent — being a villain just isn't paying the bills anymore. Tear through the city to speed up your journey, but beware — it's fighting back! Earn enough before your power runs out and make sure you complete your deliveries in time.",
             "images": [
                 "../../images/MECH2.png",
                 "../../images/MECH3.gif",
@@ -35,7 +36,7 @@
         {
             "id": "game4",
             "name": "Night of the Dice",
-            "description": "This is a brief description of Game 4. It provides an overview of the game's storyline, features, and gameplay mechanics.",
+            "description": "**Created for:** GMTK Game Jam 2022 (48-hour development)\n**Theme:** Roll of the Dice\n**Team Size:** 7\n**My Contributions:** Programming, Game Design, Level and World Design, Testing\n\nNight of the Dice is a dark, atmospheric platformer where you are the dice itself. Roll it to gain unique abilities based on the face you land on, such as gravity float, bull dash, a hand that flings you away, bounce ball, double jump, and an unstoppable speed boost. Can you make it to the top and destroy the bell to end the suffering once and for all?\n\n - inspired by games like Getting Over it and Jump King",
             "images": [
                 "../../images/DICE2.png",
                 "../../images/DICE3.png",
@@ -46,7 +47,7 @@
         {
             "id": "game5",
             "name": "Wrong Road",
-            "description": "This is a brief description of Game 4. It provides an overview of the game's storyline, features, and gameplay mechanics.",
+            "description": "**Created for:** Ludum Dare 50 (3 days development)\n**Theme:** Delay the Inevitable\n**Team Size:** 4\n**My Contributions:** Programming, Game Design, Testing\n\nAfter a successful heist, you find yourself fleeing from the cops while your car slowly breaks down. As you drive through an endless, procedurally generated train tunnel, a new problem emerges: a speeding train. Push your car to its limits, racing to escape both the police and the oncoming train. To keep going, 'fix' your car by punching the speedometer, turning off the faulty, endlessly restarting radio, or cranking the hand crank to recharge the battery. How far can you go before everything falls apart?",
             "images": [
                 "../../images/ROAD2.png",
                 "../../images/ROAD3.png",
@@ -56,18 +57,19 @@
         {
             "id": "game6",
             "name": "Burning Light",
-            "description": "This is a brief description of Game 4. It provides an overview of the game's storyline, features, and gameplay mechanics.",
+            "description": "**Created for:** Global Game Jam 2022 (10 days development)\n**Theme:** Duality\n**Team Size:** 9\n**My Contributions:** Programming, Game Design, Level Design, UI and Menus, Testing\n\nIn a near future ravaged by environmental disaster, the sun now shines so intensely it burns, and humanity has been enslaved by robotic overlords. Navigate your way through the main facility to end this brutal subjugation. Stay undetected, avoid the searing sunlight, and use the Lumen™ device to absorb light, activating various contraptions to solve puzzles. Immerse yourself in this atmospheric horror puzzle game as you face the ultimate challenge: defeating the end boss and reclaiming freedom.",
             "images": [
                 "../../images/BL2.png",
                 "../../images/BL3.png",
                 "../../images/BL4.gif",
-                "../../images/BL5.png"
+                "../../images/BL5.png",
+                "../../images/BL6.png"
             ]
         },
         {
             "id": "game7",
             "name": "Cultist Deal",
-            "description": "This is a brief description of Game 4. It provides an overview of the game's storyline, features, and gameplay mechanics.",
+            "description": "**Created for:** GMTK Game Jam 2021 (48-hour development)\n**Theme:** Joined Together\n**Team Size:** 1\n\nCultist Deal is a short puzzle platformer where you find yourself trapped in hell — quite literally — with no movement abilities. To escape, you must bind yourself to ancient pacts from old tomes, each granting you new powers. But beware — chaining yourself to multiple pacts comes with consequences, and breaking these bonds may cost you dearly. Will you navigate the infernal depths and find your way out, or become bound forever?",
             "images": [
                 "../../images/CD2.png",
                 "../../images/CD2.png",
@@ -99,7 +101,6 @@
                 "../../images/Worm4.png",
                 "../../images/Worm5.png",
                 "../../images/Worm6.png"
-                
             ]
         },
         {

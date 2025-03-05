@@ -41,6 +41,7 @@
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 40px; /* Increased space between description and slideshow */
+            line-height: 1.5; /* Add more space between lines of text */
         }
 
         .slideshow-container {
@@ -124,7 +125,9 @@
                     const game = data.games.find(g => g.id === gameId);
                     if (game) {
                         document.getElementById('game-name').textContent = game.name;
-                        document.getElementById('game-description').textContent = game.description;
+                        document.getElementById('game-description').innerHTML = game.description
+                            .replace(/\n/g, '<br>')
+                            .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
 
                         const slideshowContainer = document.getElementById('slideshow-container');
                         game.images.forEach((image, index) => {
