@@ -6,8 +6,8 @@
             "description": "**Created for:** GMTK Game Jam 2023 (48-hour development)\n**Theme:** Roles Reversed\n**Team Size:** 2\n**My Contributions:** Game Design, Level Design, Programming, UI, Testing\n\nTower Swapper is a unique twist on the tower defense genre, where roles are reversed. Instead of placing towers, you take control of them in first-person mode to defend the base of a computer-controlled 'player'. The AI-controlled player earns currency from your successful eliminations and strategically places and upgrades towers from a selection of four different types to counter incoming enemies.",
             "images": [
                 "../../images/TS3.JPG",
-                "../../images/TS2.jpg",
-                "../../images/TS5.jpg"
+                "../../images/TS2.JPG",
+                "../../images/TS5.JPG"
             ]
         },
         {
