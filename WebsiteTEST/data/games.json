@@ -81,7 +81,7 @@
         {
             "id": "project1",
             "name": "Night Of Demise",
-            "description": "This is a brief description of Project 1. It provides an overview of the project's goals, features, and outcomes.",
+            "description": "**Created for:** University (3 Months development)\n**Project:** Experimental Game Desgin\n**Team Size:** Solo Project\n\nNight of Demise is a VR horror game designed to experiment with unconventional game mechanics. As the last survivor in a post-apocalyptic suburban home, you must manage your basic needs — hunger, social interaction, and sanity — before they dwindle and trigger eerie, escalating horror events. Scavenge for stored food, fuel the generator to keep the lights on, take pills to maintain your sanity, and interact with your AI companion. This AI, powered by OpenAI's API, responds to your speech and adapts to your in-game state, developing unique traits based on your needs — but be careful, as it may not always remain friendly.\n\n**Things learned:** Creating Assets, Systems and Gameplay for VR; Limitations of VR; Integrating AI and APIs; Immersive and Amtospheric Design ",
             "images": [
                 "../../images/VR2.png",
                 "../../images/V3.png",
@@ -94,7 +94,7 @@
         {
             "id": "project2",
             "name": "Worm eats World",
-            "description": "This is a brief description of Project 2. It provides an overview of the project's goals, features, and outcomes.",
+            "description": "**Created for:** University (3 Months development)\n**Project:** Game Prototype\n**Team Size:** Solo Project\n\nWorm Eats World is a fast-paced high-score chase where you control a massive, ever-evolving worm that grows stronger with every bite. Devour an entirely destructible city, unleash chaos, and upgrade with unique evolutions to become unstoppable. Survive as long as possible across eight intense levels while tanks, helicopters, rockets, mines, and explosive cars do everything they can to take you down.\n\n**Things Learned:** Rapid Prototyping, Balancing, Destructible Meshes and Environment, Simulating GPU Particles as Enemies, VFX Niagara, Game Feel and 'Juice', PSX-Retro Asthetics, Roguelike-Upgrades and Highscore Systems",
             "images": [
                 "../../images/Worm2.png",
                 "../../images/Worm3.png",
@@ -106,7 +106,7 @@
         {
             "id": "project3",
             "name": "GameArt Project",
-            "description": "This is a brief description of Project 3. It provides an overview of the project's goals, features, and outcomes.",
+            "description": "**Created for:** University (3 Months development)\n**Project:** Game Art\n**Team Size:** Solo Project\n\nIn this project, I designed and textured a small blacksmith house for a minotaur in a fantasy city-builder game. The asset was modeled in Blender and textured using Quixel Mixer, focusing on a low-poly, cel-shaded art style with warm and friendly coloring. I also created a landscape, an animated water plane, and additional decorative objects in Unity, ensuring a cohesive environment.\n\n**Things Learned:** Blender Modeling, UV Mapping, Quixel Mixer, Unity Asset Implementation, Low-Poly Art Style, Cel-Shading, Environment Design, Research and Planning for Asset Creation",
             "images": [
                 "../../images/art2.png",
                 "../../images/art3.png",
@@ -116,8 +116,8 @@
         },
         {
             "id": "project4",
-            "name": "Analogue game",
-            "description": "This is a brief description of Project 3. It provides an overview of the project's goals, features, and outcomes.",
+            "name": "Die Schlacht um Bethar (Battle of Bethar)\n2 Player Card-Game",
+            "description": "**Created for:** University (3 Months development)\n**Project:** Analogue Game\n**Team Size:** Solo Project\n\n",
             "images": [
                 "../../images/19.jpg",
                 "../../images/20.jpg",
