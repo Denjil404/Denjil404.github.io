@@ -101,7 +101,8 @@
                 "../../images/Worm4.png",
                 "../../images/Worm5.png",
                 "../../images/Worm6.png",
-                "../../images/Worm7.png"
+                "../../images/Worm7.png",
+                "../../images/WORM8.gif"
             ]
         },
         {
@@ -112,13 +113,14 @@
                 "../../images/art2.png",
                 "../../images/art3.png",
                 "../../images/art4.png",
-                "../../images/art5.png"
+                "../../images/art5.png",
+                "../../images/ART0.gif"
             ]
         },
         {
             "id": "project4",
             "name": "Die Schlacht um Bethar (Battle of Bethar)\n2 Player Card-Game",
-            "description": "**Created for:** University (3 Months development)\n**Project:** Analogue Game\n**Team Size:** Solo Project\n\nFor this project, we were tasked with designing and creating either a board or card game with a strong focus on market competitor analysis, creative mechanics, and thoughtful game design to ensure a fun experience.\n\nBattle of Bethar is a semi-competitive, asymmetric 1v1 card game where each player has distinct strengths and strategies. One player starts in a weaker position but can use three powerful Jokers—chosen from a wide selection—to turn the tide of battle, allowing them to seize control of enemy cards if their strength surpasses them. The opposing player begins without Jokers but has a full deck of reinforcements, drawing new cards whenever theirs are destroyed until they run out. The battlefield consists of three cards per side, laid out in an alternating pattern, creating dynamic and strategic gameplay. Each card also has a special trait that can activate different effects based on specific conditions.",
+            "description": "**Created for:** University (3 Months development)\n**Project:** Analogue Game\n**Team Size:** Solo Project\n\nFor this project, we were tasked with designing and creating either a board or card game with a strong focus on market competitor analysis, creative mechanics, and thoughtful game design to ensure a fun experience.\n\nBattle of Bethar is a semi-competitive, asymmetric 1v1 card game where each player has distinct strengths and strategies. One player starts in a weaker position but can use three powerful Jokers — chosen from a wide selection — to turn the tide of battle, allowing them to seize control of enemy cards if their strength surpasses them. The opposing player begins without Jokers but has a full deck of reinforcements, drawing new cards whenever theirs are destroyed until they run out. The battlefield consists of three cards per side, laid out in an alternating pattern, creating dynamic and strategic gameplay. Each card also has a special trait that can activate different effects based on specific conditions.",
             "images": [
                 "../../images/P_Analogue1.png",
                 "../../images/P_Analogue2.png",
@@ -145,7 +147,7 @@
         {
             "id": "prototype2",
             "name": "Mobile Prototype",
-            "description": "**Engine:** Unreal Engine 5\n**Platform:** Android / iOS\n**Genre:** Shoot 'em Up / Roguelike\n**Assets:** Pre-Made and Self-Created\n**Team Size:** Solo Project\n\n**Description:**\n",
+            "description": "**Engine:** Unreal Engine 5\n**Platform:** Android / iOS\n**Genre:** Shoot 'em Up / Roguelike\n**Assets:** Pre-Made and Self-Created\n**Team Size:** Solo Project\n\n**Description:**\nA mobile 2.5D shoot 'em up roguelike where players customize their ship before embarking on a  journey through space. Choose your weapon, core hull, and thrusters - each affecting damage, health, movement, and special abilities\nSurvive stages by dodging or destroying asteroids and enemy ships while collecting XP and gems. In the overworld, decide your next destination: engage in enemy encounters for valuable rewards, visit shops to purchase upgrades or repairs, face mysterious events that can bring surprises or dangers - such as ambushes or activating an ancient quantum computer - or take on powerful bosses guarding the gateway to the next galaxy.\nReaching the wormhole advances you to a new galaxy, increasing difficulty and introducing new enemies and events. If your ship is destroyed, the run ends, but you unlock permanent upgrades for future attempts. ",
             "images": [
                 "../../images/SMUPI1.png",
                 "../../images/SMUPI2.png",
@@ -158,7 +160,7 @@
         {
             "id": "prototype3",
             "name": "2D Prototype",
-            "description": "**Engine:** Unreal Engine 4\n**Platform:** PC\n**Genre:** 2D Platformer / Action\n**Assets:** Self-Created\n**Team Size:** Solo Project\n\n**Description:**\n",
+            "description": "**Engine:** Unreal Engine 4\n**Platform:** PC\n**Genre:** 2D Platformer / Action\n**Assets:** Self-Created\n**Team Size:** Solo Project\n\n**Description:**\nA 2D action platformer created as a learning project in Unreal Engine, with the goal of completing and publishing a game from start to finish. Players fight their way through a mysterious tower, battling diverse enemy types, discovering hidden collectibles, and acquiring powerful upgrades like a sword, jetpack, and ranged attacks. The ultimate challenge awaits at the tower's peak",
             "images": [
                 "../../images/BT1.png",
                 "../../images/BT2.png",
