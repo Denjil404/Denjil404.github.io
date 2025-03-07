@@ -53,15 +53,17 @@
 
         .slides {
             display: none;
+            position: relative;
         }
 
         .slides img {
             width: 100%;
             max-height: 450px; /* Set a max height to match the description box */
-            object-fit: cover; /* Maintain aspect ratio */
+            object-fit: contain; /* Maintain aspect ratio and fit within the container */
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border: 2px solid #ccc; /* Placeholder border */
+            cursor: pointer; /* Change cursor to pointer to indicate clickability */
         }
 
         .prev, .next {
@@ -91,6 +93,82 @@
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            position: relative;
+        }
+
+        .modal-content img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .modal .prev, .modal .next {
+            position: fixed;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            user-select: none;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: translateY(-50%);
+        }
+
+        .modal .prev {
+            left: 10px;
+        }
+
+        .modal .next {
+            right: 10px;
+        }
+
+        .modal .prev:hover, .modal .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            z-index: 1001;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -107,10 +185,25 @@
         </div>
     </div>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Zoomed Image">
+            <a class="prev" onclick="changeModalImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeModalImage(1)">&#10095;</a>
+        </div>
+    </div>
+
     <script>
         let slideIndex = 1;
+        let modalIndex = 0;
+        let images = [];
 
         document.addEventListener("DOMContentLoaded", function() {
+            // Ensure the modal is hidden when the page is loaded
+            document.getElementById('myModal').style.display = "none";
+
             const urlParams = new URLSearchParams(window.location.search);
             const gameId = urlParams.get('id');
 
@@ -130,6 +223,7 @@
                             .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
 
                         const slideshowContainer = document.getElementById('slideshow-container');
+                        images = game.images;
                         game.images.forEach((image, index) => {
                             const slideDiv = document.createElement('div');
                             slideDiv.className = 'slides';
@@ -138,6 +232,9 @@
                             const img = document.createElement('img');
                             img.src = image;
                             img.alt = `Screenshot ${index + 1}`;
+                            img.addEventListener('click', function() {
+                                openModal(index);
+                            });
 
                             slideDiv.appendChild(img);
                             slideshowContainer.insertBefore(slideDiv, slideshowContainer.firstChild);
@@ -170,6 +267,40 @@
             }
             slides[slideIndex-1].style.display = "block";
         }
+
+        function openModal(index) {
+            modalIndex = index;
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById('modal-img');
+            modal.style.display = "flex";
+            modalImg.src = images[modalIndex];
+        }
+
+        function changeModalImage(n) {
+            modalIndex += n;
+            if (modalIndex >= images.length) {
+                modalIndex = 0;
+            } else if (modalIndex < 0) {
+                modalIndex = images.length - 1;
+            }
+            const modalImg = document.getElementById('modal-img');
+            modalImg.src = images[modalIndex];
+        }
+
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('myModal').style.display = "none";
+        });
+
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        window.addEventListener('beforeunload', function() {
+            document.getElementById('myModal').style.display = "none";
+        });
     </script>
 </body>
 </html>
