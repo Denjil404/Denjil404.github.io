@@ -5,9 +5,9 @@
             "name": "Tower Swapper",
             "description": "**Created for:** GMTK Game Jam 2023 (48-hour development)\n**Theme:** Roles Reversed\n**Team Size:** 2\n**My Contributions:** Game Design, Level Design, Programming, UI, Testing\n\nTower Swapper is a unique twist on the tower defense genre, where roles are reversed. Instead of placing towers, you take control of them in first-person mode to defend the base of a computer-controlled 'player'. The AI-controlled player earns currency from your successful eliminations and strategically places and upgrades towers from a selection of four different types to counter incoming enemies.",
             "images": [
-                "../../images/TS3.png",
-                "../../images/TS2.png",
-                "../../images/TS5.png"
+                "../../assets/images/games/TS3.png",
+                "../../assets/images/games/TS2.png",
+                "../../assets/images/games/TS5.png"
             ]
         },
         {
@@ -15,11 +15,11 @@
             "name": "Eggmaggedon",
             "description": "**Created for:** Mini Jam 119 (~72-hour development)\n**Theme:** Heaven (Everything Can Die)\n**Team Size:** 5\n**My Contributions:** Design and Functionality of Menus and UI, Game Design, Testing\n\nThe end is near—meteors rain from the sky, and chaos unfolds. As the Egg Harbinger, your sacred duty is to collect untainted souls and guide them to heaven. Use your dash to break through obstacles, chain soul collections in rapid succession, and rack up style points to boost your combo multiplier. Race against time, refine your strategy, and tweak the settings to unleash even more destruction in your quest for salvation.  ",
             "images": [
-                "../../images/EGG_6.png",
-                "../../images/EGG_5.png",
-                "../../images/EGG_4.png",
-                "../../images/EGG_3.png",
-                "../../images/EGG_2.png"
+                "../../assets/images/games/EGG_6.png",
+                "../../assets/images/games/EGG_5.png",
+                "../../assets/images/games/EGG_4.png",
+                "../../assets/images/games/EGG_3.png",
+                "../../assets/images/games/EGG_2.png"
             ]
         },
         {
@@ -27,10 +27,10 @@
             "name": "Mech Delivery Mayhem",
             "description": "**Created for:** MechJam III (~7 days development)\n**Theme:** Mechs (Retro)\n**Team Size:** 4\n**My Contributions:** Programming, Game Design, UI, Testing\n\nIn Mech Delivery Mayhem, you control a massive mech equipped with powerful lasers, and your mission is simple: reach each delivery destination as quickly as possible to pay your weekly rent — being a villain just isn't paying the bills anymore. Tear through the city to speed up your journey, but beware — it's fighting back! Earn enough before your power runs out and make sure you complete your deliveries in time.",
             "images": [
-                "../../images/MECH2.png",
-                "../../images/MECH3.gif",
-                "../../images/MECH4.png",
-                "../../images/MECH5.png"
+                "../../assets/images/games/MECH2.png",
+                "../../assets/images/games/MECH3.gif",
+                "../../assets/images/games/MECH4.png",
+                "../../assets/images/games/MECH5.png"
             ]
         },
         {
@@ -38,10 +38,10 @@
             "name": "Night of the Dice",
             "description": "**Created for:** GMTK Game Jam 2022 (48-hour development)\n**Theme:** Roll of the Dice\n**Team Size:** 7\n**My Contributions:** Programming, Game Design, Level and World Design, Testing\n\nNight of the Dice is a dark, atmospheric platformer where you are the dice itself. Roll it to gain unique abilities based on the face you land on, such as gravity float, bull dash, a hand that flings you away, bounce ball, double jump, and an unstoppable speed boost. Can you make it to the top and destroy the bell to end the suffering once and for all?\n\n - inspired by games like Getting Over it and Jump King",
             "images": [
-                "../../images/DICE2.png",
-                "../../images/DICE3.png",
-                "../../images/DICE4.png",
-                "../../images/DICE5.png"
+                "../../assets/images/games/DICE2.png",
+                "../../assets/images/games/DICE3.png",
+                "../../assets/images/games/DICE4.png",
+                "../../assets/images/games/DICE5.png"
             ]
         },
         {
@@ -49,9 +49,9 @@
             "name": "Wrong Road",
             "description": "**Created for:** Ludum Dare 50 (3 days development)\n**Theme:** Delay the Inevitable\n**Team Size:** 4\n**My Contributions:** Programming, Game Design, Testing\n\nAfter a successful heist, you find yourself fleeing from the cops while your car slowly breaks down. As you drive through an endless, procedurally generated train tunnel, a new problem emerges: a speeding train. Push your car to its limits, racing to escape both the police and the oncoming train. To keep going, 'fix' your car by punching the speedometer, turning off the faulty, endlessly restarting radio, or cranking the hand crank to recharge the battery. How far can you go before everything falls apart?",
             "images": [
-                "../../images/ROAD2.png",
-                "../../images/ROAD3.png",
-                "../../images/ROAD4.png"
+                "../../assets/images/games/ROAD2.png",
+                "../../assets/images/games/ROAD3.png",
+                "../../assets/images/games/ROAD4.png"
             ]
         },
         {
@@ -59,11 +59,11 @@
             "name": "Burning Light",
             "description": "**Created for:** Global Game Jam 2022 (10 days development)\n**Theme:** Duality\n**Team Size:** 9\n**My Contributions:** Programming, Game Design, Level Design, UI and Menus, Testing\n\nIn a near future ravaged by environmental disaster, the sun now shines so intensely it burns, and humanity has been enslaved by robotic overlords. Navigate your way through the main facility to end this brutal subjugation. Stay undetected, avoid the searing sunlight, and use the Lumen™ device to absorb light, activating various contraptions to solve puzzles. Immerse yourself in this atmospheric horror puzzle game as you face the ultimate challenge: defeating the end boss and reclaiming freedom.",
             "images": [
-                "../../images/BL2.png",
-                "../../images/BL3.png",
-                "../../images/BL4.gif",
-                "../../images/BL5.png",
-                "../../images/BL6.png"
+                "../../assets/images/games/BL2.png",
+                "../../assets/images/games/BL3.png",
+                "../../assets/images/games/BL4.gif",
+                "../../assets/images/games/BL5.png",
+                "../../assets/images/games/BL6.png"
             ]
         },
         {
@@ -71,11 +71,11 @@
             "name": "Cultist Deal",
             "description": "**Created for:** GMTK Game Jam 2021 (48-hour development)\n**Theme:** Joined Together\n**Team Size:** 1\n\nCultist Deal is a short puzzle platformer where you find yourself trapped in hell — quite literally — with no movement abilities. To escape, you must bind yourself to ancient pacts from old tomes, each granting you new powers. But beware — chaining yourself to multiple pacts comes with consequences, and breaking these bonds may cost you dearly. Will you navigate the infernal depths and find your way out, or become bound forever?",
             "images": [
-                "../../images/CD2.png",
-                "../../images/CD2.png",
-                "../../images/CD3.png",
-                "../../images/CD4.png",
-                "../../images/CD5.gif"
+                "../../assets/images/games/CD2.png",
+                "../../assets/images/games/CD2.png",
+                "../../assets/images/games/CD3.png",
+                "../../assets/images/games/CD4.png",
+                "../../assets/images/games/CD5.gif"
             ]
         },
         {
@@ -83,12 +83,12 @@
             "name": "Night Of Demise",
             "description": "**Created for:** University (3 Months development)\n**Project:** Experimental Game Desgin\n**Team Size:** Solo Project\n\nNight of Demise is a VR horror game designed to experiment with unconventional game mechanics. As the last survivor in a post-apocalyptic suburban home, you must manage your basic needs — hunger, social interaction, and sanity — before they dwindle and trigger eerie, escalating horror events. Scavenge for stored food, fuel the generator to keep the lights on, take pills to maintain your sanity, and interact with your AI companion. This AI, powered by OpenAI's API, responds to your speech and adapts to your in-game state, developing unique traits based on your needs — but be careful, as it may not always remain friendly.\n\n**Things learned:** Creating Assets, Systems and Gameplay for VR; Limitations of VR; Integrating AI and APIs; Immersive and Amtospheric Design ",
             "images": [
-                "../../images/VR2.png",
-                "../../images/V3.png",
-                "../../images/V4.png",
-                "../../images/VR5.png",
-                "../../images/VR6.png",
-                "../../images/VR7.png"
+                "../../assets/images/games/VR2.png",
+                "../../assets/images/games/V3.png",
+                "../../assets/images/games/V4.png",
+                "../../assets/images/games/VR5.png",
+                "../../assets/images/games/VR6.png",
+                "../../assets/images/games/VR7.png"
             ]
         },
         {
@@ -96,13 +96,13 @@
             "name": "Worm eats World",
             "description": "**Created for:** University (3 Months development)\n**Project:** Game Prototype\n**Team Size:** Solo Project\n\nWorm Eats World is a fast-paced high-score chase where you control a massive, ever-evolving worm that grows stronger with every bite. Devour an entirely destructible city, unleash chaos, and upgrade with unique evolutions to become unstoppable. Survive as long as possible across eight intense levels while tanks, helicopters, rockets, mines, and explosive cars do everything they can to take you down.\n\n**Things Learned:** Rapid Prototyping, Balancing, Destructible Meshes and Environment, Simulating GPU Particles as Enemies, VFX Niagara, Game Feel and 'Juice', PSX-Retro Asthetics, Roguelike-Upgrades and Highscore Systems",
             "images": [
-                "../../images/Worm2.png",
-                "../../images/Worm3.png",
-                "../../images/Worm4.png",
-                "../../images/Worm5.png",
-                "../../images/Worm6.png",
-                "../../images/Worm7.png",
-                "../../images/WORM8.gif"
+                "../../assets/images/games/Worm2.png",
+                "../../assets/images/games/Worm3.png",
+                "../../assets/images/games/Worm4.png",
+                "../../assets/images/games/Worm5.png",
+                "../../assets/images/games/Worm6.png",
+                "../../assets/images/games/Worm7.png",
+                "../../assets/images/games/WORM8.gif"
             ]
         },
         {
@@ -110,11 +110,11 @@
             "name": "GameArt Project",
             "description": "**Created for:** University (3 Months development)\n**Project:** Game Art\n**Team Size:** Solo Project\n\nIn this project, I designed and textured a small blacksmith house for a minotaur in a fantasy city-builder game. The asset was modeled in Blender and textured using Quixel Mixer, focusing on a low-poly, cel-shaded art style with warm and friendly coloring. I also created a landscape, an animated water plane, and additional decorative objects in Unity, ensuring a cohesive environment.\n\n**Things Learned:** Blender Modeling, UV Mapping, Quixel Mixer, Unity Asset Implementation, Low-Poly Art Style, Cel-Shading, Environment Design, Research and Planning for Asset Creation",
             "images": [
-                "../../images/art2.png",
-                "../../images/art3.png",
-                "../../images/art4.png",
-                "../../images/art5.png",
-                "../../images/ART0.gif"
+                "../../assets/images/games/art2.png",
+                "../../assets/images/games/art3.png",
+                "../../assets/images/games/art4.png",
+                "../../assets/images/games/art5.png",
+                "../../assets/images/games/ART0.gif"
             ]
         },
         {
@@ -122,13 +122,13 @@
             "name": "Die Schlacht um Bethar (Battle of Bethar)\n2 Player Card-Game",
             "description": "**Created for:** University (3 Months development)\n**Project:** Analogue Game\n**Team Size:** Solo Project\n\nFor this project, we were tasked with designing and creating either a board or card game with a strong focus on market competitor analysis, creative mechanics, and thoughtful game design to ensure a fun experience.\n\nBattle of Bethar is a semi-competitive, asymmetric 1v1 card game where each player has distinct strengths and strategies. One player starts in a weaker position but can use three powerful Jokers — chosen from a wide selection — to turn the tide of battle, allowing them to seize control of enemy cards if their strength surpasses them. The opposing player begins without Jokers but has a full deck of reinforcements, drawing new cards whenever theirs are destroyed until they run out. The battlefield consists of three cards per side, laid out in an alternating pattern, creating dynamic and strategic gameplay. Each card also has a special trait that can activate different effects based on specific conditions.",
             "images": [
-                "../../images/P_Analogue1.png",
-                "../../images/P_Analogue2.png",
-                "../../images/P_Analogue3.png",
-                "../../images/P_Analogue4.png",
-                "../../images/P_Analogue5.png",
-                "../../images/P_Analogue6.png",
-                "../../images/P_Analogue7.png"
+                "../../assets/images/games/P_Analogue1.png",
+                "../../assets/images/games/P_Analogue2.png",
+                "../../assets/images/games/P_Analogue3.png",
+                "../../assets/images/games/P_Analogue4.png",
+                "../../assets/images/games/P_Analogue5.png",
+                "../../assets/images/games/P_Analogue6.png",
+                "../../assets/images/games/P_Analogue7.png"
                 
             ]
         },
@@ -137,11 +137,11 @@
             "name": "WIP: Corrupted Eden",
             "description": "**Engine:** Unreal Engine 5\n**Platform:** PC\n**Genre:** Survival-Horror / MetroidVania\n**Assets:** Pre-Made and Self-Created\n**Team Size:** Solo Project\n\n**Description:**\nIn the year 2247, Earth's resources have dwindled to the brink of collapse. In search of salvation, humanity sends an expedition beyond the confines of the solar system, arriving at an exoplanet. With its dense atmosphere, alien wilderness, and towering eldritch trees, it appears to be the perfect candidate for terraformation — a second chance for survival.\nAt first, the mission is a success. The crew establishes a base, setting up research facilities to analyze the planet's rich ecosystem. But as supplies run low, desperation drives them to an eerie discovery — pulsating, bioluminescent fruit hanging from the alien trees. With no other option, they consume it.\nThe transformation begins slowly. A creeping sickness. A whisper in the dark. Then, one by one, they change. Their eyes blacken, their bodies pale, and their will is no longer their own. The trees have them now. They are no longer human.",
             "images": [
-                "../../images/PH1.png",
-                "../../images/PH2.png",
-                "../../images/PH3.png",
-                "../../images/PH4.png",
-                "../../images/PH5.png"
+                "../../assets/images/games/PH1.png",
+                "../../assets/images/games/PH2.png",
+                "../../assets/images/games/PH3.png",
+                "../../assets/images/games/PH4.png",
+                "../../assets/images/games/PH5.png"
             ]
         },
         {
@@ -149,12 +149,12 @@
             "name": "Mobile Prototype",
             "description": "**Engine:** Unreal Engine 5\n**Platform:** Android / iOS\n**Genre:** Shoot 'em Up / Roguelike\n**Assets:** Pre-Made and Self-Created\n**Team Size:** Solo Project\n\n**Description:**\nA mobile 2.5D shoot 'em up roguelike where players customize their ship before embarking on a  journey through space. Choose your weapon, core hull, and thrusters - each affecting damage, health, movement, and special abilities\nSurvive stages by dodging or destroying asteroids and enemy ships while collecting XP and gems. In the overworld, decide your next destination: engage in enemy encounters for valuable rewards, visit shops to purchase upgrades or repairs, face mysterious events that can bring surprises or dangers - such as ambushes or activating an ancient quantum computer - or take on powerful bosses guarding the gateway to the next galaxy.\nReaching the wormhole advances you to a new galaxy, increasing difficulty and introducing new enemies and events. If your ship is destroyed, the run ends, but you unlock permanent upgrades for future attempts. ",
             "images": [
-                "../../images/SMUPI1.png",
-                "../../images/SMUPI2.png",
-                "../../images/SMUPI3.png",
-                "../../images/SMUPI4.png",
-                "../../images/SMUPI5.png",
-                "../../images/SMUPI0.gif"
+                "../../assets/images/games/SMUPI1.png",
+                "../../assets/images/games/SMUPI2.png",
+                "../../assets/images/games/SMUPI3.png",
+                "../../assets/images/games/SMUPI4.png",
+                "../../assets/images/games/SMUPI5.png",
+                "../../assets/images/games/SMUPI0.gif"
             ]
         },
         {
@@ -162,10 +162,10 @@
             "name": "2D Prototype",
             "description": "**Engine:** Unreal Engine 4\n**Platform:** PC\n**Genre:** 2D Platformer / Action\n**Assets:** Self-Created\n**Team Size:** Solo Project\n\n**Description:**\nA 2D action platformer created as a learning project in Unreal Engine, with the goal of completing and publishing a game from start to finish. Players fight their way through a mysterious tower, battling diverse enemy types, discovering hidden collectibles, and acquiring powerful upgrades like a sword, jetpack, and ranged attacks. The ultimate challenge awaits at the tower's peak",
             "images": [
-                "../../images/BT1.png",
-                "../../images/BT2.png",
-                "../../images/BT3.png",
-                "../../images/BT4.png"
+                "../../assets/images/games/BT1.png",
+                "../../assets/images/games/BT2.png",
+                "../../assets/images/games/BT3.png",
+                "../../assets/images/games/BT4.png"
                 
             ]
         }

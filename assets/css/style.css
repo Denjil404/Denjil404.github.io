@@ -1,0 +1,563 @@
+:root {
+    --bg-color: #050505;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --nav-bg: rgba(5, 5, 5, 0.7);
+    --text-main: #f5f5f7;
+    --text-dim: #a1a1a6;
+    --accent: #2997ff;
+    --section-padding: 80px 10%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* NAVBAR STYLING */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--nav-bg);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.9em;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-main);
+}
+
+/* ABOUT ME - PREMIUM CARD LAYOUT */
+#about {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: 120px auto 80px auto;
+    padding: 80px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 40px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.about-text {
+    flex: 1.2;
+}
+
+.about-text h1 {
+    font-size: clamp(3em, 6vw, 4.5em);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #ffffff 0%, var(--text-dim) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
+
+.about-text .role {
+    font-size: 1.5em;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 30px;
+}
+
+.about-divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+
+.about-text p {
+    font-size: 1.25em;
+    color: var(--text-dim);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.about-visual {
+    flex: 0.8;
+    position: relative;
+    aspect-ratio: 1;
+    background: radial-gradient(circle at center, rgba(41, 151, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.about-visual img {
+    width: 70%;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 30px rgba(41, 151, 255, 0.4));
+    transition: transform 0.5s ease;
+}
+
+#about:hover .about-visual img {
+    transform: scale(1.05) rotate(5deg);
+}
+
+/* SECTION STYLING */
+.section {
+    padding: var(--section-padding);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: none;
+}
+
+/* PROJECT GRID - MAGAZINE / HIGHLIGHT STYLE */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- GAME TEMPLATE SPECIFIC STYLES --- */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--section-padding);
+    margin-top: 60px; /* Offset for nav */
+}
+
+.game-header {
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin-bottom: 40px;
+}
+
+.game-main-title {
+    font-size: clamp(2.5em, 5vw, 4em);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #ffffff 0%, var(--text-dim) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    width: 100%;
+}
+
+.game-description {
+    color: var(--text-dim);
+    font-size: 1.15em;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Bullet list/specifications left align fix */
+.game-description ul {
+    text-align: left;
+    list-style-position: inside;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.game-description ul li {
+    margin-bottom: 8px;
+}
+
+.slideshow-container {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto 40px auto;
+    border-radius: 24px;
+    overflow: visible; /* Changed from hidden so arrows can sit outside */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.slides {
+    display: none;
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 562px; /* Fixed height for 1000px max-width at 16:9 */
+    background: rgba(0, 0, 0, 0.6); /* Adds a dark frame for vertical images */
+    backdrop-filter: blur(10px); /* Gives it a neat frosted glass look */
+}
+
+@media (max-width: 1000px) {
+    .slides {
+        height: 56vw; /* Maintain aspect ratio on smaller screens */
+    }
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Prevents zooming/cropping, scales to fit inside the box */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.slides img:hover {
+    transform: scale(1.02);
+}
+
+.prev, .next, .game-modal .prev, .game-modal .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    user-select: none;
+    border-radius: 50%;
+    background-color: rgba(5, 5, 5, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev { left: -70px; }
+.next { right: -70px; }
+.game-modal .prev { left: 40px; }
+.game-modal .next { right: 40px; }
+
+.prev:hover, .next:hover, .game-modal .prev:hover, .game-modal .next:hover {
+    background-color: var(--accent);
+    color: #fff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Modal styles */
+.game-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.game-modal-content img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.game-modal-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: var(--text-dim);
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 2001;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(5, 5, 5, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.game-modal-close:hover {
+    color: #fff;
+    background: var(--accent);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12; /* mobile fallback */
+}
+
+/* Desktop Layout: Feature first item, split the rest */
+@media (min-width: 900px) {
+    .project-card:first-child {
+        grid-column: span 12;
+        flex-direction: row; /* Horizontal layout for featured card */
+        align-items: center;
+        height: 450px;
+    }
+    .project-card:first-child img {
+        width: 60%;
+        height: 100%;
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.02);
+    }
+    .project-card:first-child .project-info {
+        width: 40%;
+        padding: 60px;
+        justify-content: center;
+    }
+    .project-card:first-child .name {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+    .project-card:first-child .project-text {
+        font-size: 1.1em;
+    }
+
+    .project-card:not(:first-child) {
+        grid-column: span 6; /* 2 side-by-side for the rest */
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 2500px) {
+    /* If there are more than 3 items, make the standard cards span 4 (3 per row) */
+    .project-grid > .project-card:not(:first-child):nth-child(n+2) {
+        grid-column: span 4;
+    }
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(41, 151, 255, 0.05);
+}
+
+.project-card a {
+    display: flex;
+    flex-direction: inherit;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.project-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.8s ease;
+    background-color: #111;
+}
+
+.project-card:hover img {
+    transform: scale(1.02);
+}
+
+.project-info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-info .name {
+    font-weight: 700;
+    font-size: 1.4em;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.project-info .date {
+    font-size: 0.9em;
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.project-text {
+    margin-top: 16px;
+    font-size: 1em;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+/* FOOTER/SOCIALS */
+footer {
+    padding: 80px 0;
+    background: #000;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.social-links img {
+    width: 24px;
+    filter: grayscale(1) opacity(0.7);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover img {
+    filter: grayscale(0) opacity(1);
+    transform: scale(1.1) translateY(-3px);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 900px) {
+    :root {
+        --section-padding: 60px 6%;
+    }
+
+    nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 0 20px;
+        -webkit-overflow-scrolling: touch; /* Momentum scroll on iOS */
+    }
+    nav::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for a clean look */
+    }
+    nav {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .nav-links {
+        gap: 25px;
+        white-space: nowrap;
+        width: max-content; /* Guarantee the links don't wrap strangely */
+        padding-right: 20px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 2.2em;
+    }
+
+    #about {
+        flex-direction: column;
+        margin-top: 100px;
+        padding: 40px 20px;
+        gap: 40px;
+        text-align: center;
+    }
+    .about-divider {
+        margin: 0 auto 30px auto;
+    }
+    .about-visual {
+        width: 100%;
+        max-width: 250px; /* Slightly smaller for highly compact phones */
+    }
+    .about-text h1 {
+        font-size: 2.5em; /* Ensure title fits nicely */
+    }
+
+    /* Card Responsive Fixes */
+    .project-info {
+        padding: 20px; /* Reduce massive 30px padding on thin screens */
+    }
+    .project-info .name {
+        font-size: 1.25em;
+    }
+    .project-text {
+        font-size: 0.95em;
+    }
+
+    /* Game Page responsive */
+    .game-header { padding: 30px 20px; }
+    .prev, .next { width: 40px; height: 40px; font-size: 16px; }
+    .game-main-title { font-size: 2.2em; margin-top: 20px; }
+}
