@@ -40,6 +40,10 @@ nav {
     justify-content: center;
 }
 
+.mobile-nav-header {
+    display: none; /* Hidden on desktop */
+}
+
 .nav-links {
     display: flex;
     gap: 40px;
@@ -499,24 +503,25 @@ footer {
         --section-padding: 60px 6%;
     }
 
-    nav {
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding: 0 20px;
-        -webkit-overflow-scrolling: touch; /* Momentum scroll on iOS */
+    #about {
+        flex-direction: column;
+        margin-top: 100px;
+        padding: 50px 30px;
+        gap: 40px;
+        text-align: center;
     }
-    nav::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for a clean look */
+    
+    .about-divider {
+        margin: 0 auto 30px auto;
     }
-    nav {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+    
+    .about-visual {
+        width: 100%;
+        max-width: 250px;
     }
-    .nav-links {
-        gap: 25px;
-        white-space: nowrap;
-        width: max-content; /* Guarantee the links don't wrap strangely */
-        padding-right: 20px;
+    
+    .about-text h1 {
+        font-size: 2.8em;
     }
 
     .section-header {
@@ -527,37 +532,208 @@ footer {
         font-size: 2.2em;
     }
 
-    #about {
-        flex-direction: column;
-        margin-top: 100px;
-        padding: 40px 20px;
-        gap: 40px;
-        text-align: center;
-    }
-    .about-divider {
-        margin: 0 auto 30px auto;
-    }
-    .about-visual {
-        width: 100%;
-        max-width: 250px; /* Slightly smaller for highly compact phones */
-    }
-    .about-text h1 {
-        font-size: 2.5em; /* Ensure title fits nicely */
-    }
-
-    /* Card Responsive Fixes */
-    .project-info {
-        padding: 20px; /* Reduce massive 30px padding on thin screens */
-    }
-    .project-info .name {
-        font-size: 1.25em;
-    }
-    .project-text {
-        font-size: 0.95em;
-    }
-
     /* Game Page responsive */
     .game-header { padding: 30px 20px; }
     .prev, .next { width: 40px; height: 40px; font-size: 16px; }
     .game-main-title { font-size: 2.2em; margin-top: 20px; }
+}
+
+/* SMARTPHONE SPECIFIC - TOP NAV & HAMBURGER MENU */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 40px 5%;
+    }
+
+    body {
+        padding-bottom: 0; 
+    }
+
+    /* Keep NavBar at the top */
+    nav {
+        top: 0;
+        bottom: auto;
+        height: 60px;
+        padding: 0 20px;
+        background: rgba(10, 10, 10, 0.85); 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        border-top: none;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    nav.expanded {
+        height: 250px; /* Expanded menu height */
+        background: rgba(10, 10, 10, 0.95);
+    }
+
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 60px; /* Same as collapsed nav height */
+        flex-shrink: 0;
+    }
+
+    .mobile-logo {
+        height: 30px;
+        object-fit: contain;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-toggle span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: var(--text-main);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Transform hamburger into an X */
+    nav.expanded .menu-toggle span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    nav.expanded .menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+    nav.expanded .menu-toggle span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 20px 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    nav.expanded .nav-links {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav-links a {
+        font-size: 1.1em;
+        font-weight: 500;
+        padding: 5px 0;
+        display: block;
+        text-align: left;
+    }
+
+    .hero-content {
+        margin-top: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em; /* Prevent wrapping into too many lines */
+    }
+
+    #about {
+        border-radius: 20px;
+        padding: 30px 20px;
+        margin-top: 40px;
+        gap: 30px;
+    }
+
+    .about-text .role {
+        font-size: 1.25em;
+    }
+
+    .about-text p {
+        font-size: 1.1em; /* More readable on phones */
+    }
+
+    .project-grid {
+        gap: 20px; /* Reduce massive spaces */
+    }
+
+    .project-card {
+        border-radius: 18px; /* Tighter corners for small boxes */
+    }
+
+    .project-info {
+        padding: 20px; /* Reduce from 30px so content can breathe */
+    }
+
+    .project-info .name {
+        font-size: 1.25em;
+    }
+
+    .project-text {
+        font-size: 0.95em;
+        margin-top: 10px;
+    }
+
+    /* Footer formatting */
+    footer {
+        padding: 50px 0 30px 0; /* Cut down massive dead space */
+    }
+    
+    .social-links {
+        gap: 30px;
+    }
+
+    /* Mobile carousel: horizontal swipe for each .project-grid */
+    .project-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding: 8px 16px 24px 16px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .project-grid::-webkit-scrollbar {
+        display: none; /* hide scrollbar */
+    }
+
+    .project-card {
+        flex: 0 0 86%; /* card width in carousel */
+        max-width: 86%;
+        min-width: 260px;
+        scroll-snap-align: center;
+        border-radius: 18px;
+        margin: 0 auto;
+    }
+
+    /* Smaller text on mobile for compactness */
+    .about-text h1 { font-size: 2.2em; }
+    .section-header h2 { font-size: 1.6em; }
+    .project-info .name { font-size: 1.1em; }
+    .project-info .date { font-size: 0.85em; }
+    .project-text { font-size: 0.9em; }
+
+    /* Make featured first card stack vertically (image on top) */
+    .project-card:first-child {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .project-card:first-child img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
 }

@@ -11,7 +11,15 @@
 <body>
 
     <nav>
-        <ul class="nav-links">
+        <div class="mobile-nav-header">
+            <img src="assets/images/ui/logosmall.png" alt="Logo" class="mobile-logo">
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul class="nav-links" id="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#prototypes">Prototypes</a></li>
             <li><a href="#uni-projects">Uni Projects</a></li>
@@ -223,5 +231,24 @@
         </div>
     </footer>
 
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('expanded');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (nav.classList.contains('expanded')) {
+                    nav.classList.remove('expanded');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
