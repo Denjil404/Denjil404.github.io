@@ -314,9 +314,14 @@
 
     function setupDescriptionCarouselHint(descriptionElement, shell) {
         const existingHint = descriptionElement.querySelector('.description-swipe-hint');
+        const existingIndicator = descriptionElement.querySelector('.description-carousel-indicator');
 
         if (existingHint) {
             existingHint.remove();
+        }
+
+        if (existingIndicator) {
+            existingIndicator.remove();
         }
 
         if (!mobileGameQuery.matches || !shell || shell.childElementCount < 2) {
@@ -328,12 +333,53 @@
         hint.textContent = '\u2190 Swipe cards \u2192';
         descriptionElement.appendChild(hint);
 
+        const indicator = document.createElement('div');
+        indicator.className = 'description-carousel-indicator';
+        indicator.setAttribute('aria-label', 'Description panel indicator');
+
+        const panels = Array.from(shell.children);
+        const indicatorButtons = panels.map((_, index) => {
+            const bar = document.createElement('button');
+            bar.type = 'button';
+            bar.className = 'description-carousel-indicator-bar';
+            bar.setAttribute('aria-label', `Show panel ${index + 1} of ${panels.length}`);
+            bar.addEventListener('click', () => {
+                shell.scrollTo({ left: shell.clientWidth * index, behavior: 'smooth' });
+            });
+            indicator.appendChild(bar);
+            return bar;
+        });
+
+        descriptionElement.appendChild(indicator);
+
+        const updateIndicator = () => {
+            const panelWidth = shell.clientWidth || 1;
+            const activeIndex = Math.min(panels.length - 1, Math.max(0, Math.round(shell.scrollLeft / panelWidth)));
+
+            indicatorButtons.forEach((bar, index) => {
+                bar.classList.toggle('is-active', index === activeIndex);
+            });
+        };
+
+        let rafId = null;
+        const handleScroll = () => {
+            if (rafId !== null) {
+                return;
+            }
+
+            rafId = window.requestAnimationFrame(() => {
+                rafId = null;
+                updateIndicator();
+            });
+        };
+
         const hideHint = () => {
             hint.classList.add('is-hidden');
         };
 
         shell.addEventListener('touchstart', hideHint, { passive: true, once: true });
         shell.addEventListener('pointerdown', hideHint, { passive: true, once: true });
+        shell.addEventListener('scroll', handleScroll, { passive: true });
 
         // Fades naturally after a few seconds if the user does not interact.
         setTimeout(hideHint, 4500);
@@ -348,6 +394,8 @@
                 }, 260);
             }, 320);
         }
+
+        updateIndicator();
     }
 
         function plusSlides(n) {

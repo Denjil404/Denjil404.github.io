@@ -1131,8 +1131,8 @@ footer {
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         gap: 0;
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
+        width: 100%;
+        margin: 0;
         padding: 0;
         border: none;
         box-shadow: none;
@@ -1169,8 +1169,42 @@ footer {
         pointer-events: none;
     }
 
+    .description-carousel-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        width: 100%;
+        margin-top: 12px;
+        margin-bottom: 4px;
+        pointer-events: auto;
+    }
+
+    .description-carousel-indicator-bar {
+        appearance: none;
+        border: 0;
+        width: 18px;
+        height: 5px;
+        padding: 0;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.18);
+        cursor: pointer;
+        transition: width 0.22s ease, background-color 0.22s ease, opacity 0.22s ease, transform 0.22s ease;
+    }
+
+    .description-carousel-indicator-bar.is-active {
+        width: 30px;
+        background: var(--accent);
+        box-shadow: 0 0 0 4px rgba(41, 151, 255, 0.12);
+    }
+
+    .description-carousel-indicator-bar:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.32);
+    }
+
     .description-meta-grid {
-        flex: 0 0 100vw;
+        flex: 0 0 100%;
         scroll-snap-align: start;
         display: grid;
         grid-template-columns: 1fr;
@@ -1181,12 +1215,13 @@ footer {
         grid-row: auto;
         border: 1px solid rgba(255, 255, 255, 0.06);
         border-radius: 20px;
-        margin: 20px 5%;
-        width: calc(100vw - 10% - 40px);
+        margin: 20px 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .description-sections {
-        flex: 0 0 100vw;
+        flex: 0 0 100%;
         scroll-snap-align: start;
         display: grid;
         gap: 14px;
@@ -1196,8 +1231,9 @@ footer {
         grid-row: auto;
         border: 1px solid rgba(255, 255, 255, 0.06);
         border-radius: 20px;
-        margin: 20px 5%;
-        width: calc(100vw - 10% - 40px);
+        margin: 20px 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .description-meta-card,
