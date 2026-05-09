@@ -40,7 +40,7 @@
             </div>
             <div class="about-visual">
                 <!-- You can put a profile photo or an abstract 3D render here -->
-                <img src="assets/images/ui/logosmall.png" alt="Abstract Visual">
+                <img src="assets/images/ui/logosmall.png" alt="Logo">
             </div>
         </section>
 
@@ -231,24 +231,6 @@
         </div>
     </footer>
 
-    <script>
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const nav = document.querySelector('nav');
-        const navLinks = document.querySelectorAll('.nav-links a');
-
-        // Toggle mobile menu
-        mobileMenuBtn.addEventListener('click', () => {
-            nav.classList.toggle('expanded');
-        });
-
-        // Close menu when a link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (nav.classList.contains('expanded')) {
-                    nav.classList.remove('expanded');
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
