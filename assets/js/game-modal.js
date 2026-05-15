@@ -2,6 +2,7 @@
         let modalIndex = 0;
         let images = [];
         let currentGameData = null;
+        let viewerSlidePresent = false;
         const mobileGameQuery = window.matchMedia('(max-width: 768px)');
         let modalTouchStartX = 0;
         let modalTouchStartY = 0;
@@ -31,8 +32,34 @@
                         renderGameDescription(currentGameData);
 
                         const slideshowContainer = document.getElementById('slideshow-container');
-                        images = game.images;
-                        game.images.forEach((image, index) => {
+                        slideshowContainer.querySelectorAll('.slides').forEach(slide => slide.remove());
+
+                        images = Array.isArray(game.images) ? game.images : [];
+                        viewerSlidePresent = Boolean(game.model);
+
+                        if (game.model) {
+                            const viewerSlide = document.createElement('div');
+                            viewerSlide.className = 'slides game-media-viewer-slide';
+
+                            const modelViewer = document.createElement('model-viewer');
+                            modelViewer.className = 'game-model-viewer';
+                            modelViewer.setAttribute('src', game.model);
+                            modelViewer.setAttribute('alt', `${game.name} 3D model`);
+                            modelViewer.setAttribute('camera-controls', '');
+                            modelViewer.setAttribute('auto-rotate', '');
+                            modelViewer.setAttribute('interaction-prompt', 'auto');
+                            modelViewer.setAttribute('shadow-intensity', '1');
+                            modelViewer.setAttribute('exposure', '1');
+                            modelViewer.setAttribute('environment-image', 'neutral');
+
+                            const posterImage = images[0] || '../../assets/images/ui/logosmall.png';
+                            modelViewer.setAttribute('poster', posterImage);
+
+                            viewerSlide.appendChild(modelViewer);
+                            slideshowContainer.insertBefore(viewerSlide, slideshowContainer.querySelector('.prev'));
+                        }
+
+                        images.forEach((image, index) => {
                             const slideDiv = document.createElement('div');
                             slideDiv.className = 'slides';
 
@@ -94,6 +121,7 @@
         const isMobile = mobileGameQuery.matches;
 
         slideshowContainer.classList.toggle('mobile-carousel', isMobile);
+        slideshowContainer.classList.toggle('has-viewer', viewerSlidePresent);
 
         if (isMobile) {
             slideshowContainer.scrollLeft = 0;

@@ -298,6 +298,7 @@
           ]
         }
       ],
+      "model": "../../assets/meshes/Schmiede2.glb",
       "images": [
         "../../assets/images/games/art2.png",
         "../../assets/images/games/art3.png",
