@@ -2,6 +2,7 @@
         let modalIndex = 0;
         let images = [];
         let currentGameData = null;
+        let currentModelSrc = '';
         let viewerSlidePresent = false;
         const mobileGameQuery = window.matchMedia('(max-width: 768px)');
         let modalTouchStartX = 0;
@@ -36,26 +37,29 @@
 
                         images = Array.isArray(game.images) ? game.images : [];
                         viewerSlidePresent = Boolean(game.model);
+                        currentModelSrc = game.model || '';
 
                         if (game.model) {
                             const viewerSlide = document.createElement('div');
                             viewerSlide.className = 'slides game-media-viewer-slide';
 
-                            const modelViewer = document.createElement('model-viewer');
-                            modelViewer.className = 'game-model-viewer';
-                            modelViewer.setAttribute('src', game.model);
-                            modelViewer.setAttribute('alt', `${game.name} 3D model`);
-                            modelViewer.setAttribute('camera-controls', '');
-                            modelViewer.setAttribute('auto-rotate', '');
-                            modelViewer.setAttribute('interaction-prompt', 'auto');
-                            modelViewer.setAttribute('shadow-intensity', '1');
-                            modelViewer.setAttribute('exposure', '1');
-                            modelViewer.setAttribute('environment-image', 'neutral');
+                            const viewerPoster = document.createElement('img');
+                            viewerPoster.className = 'game-viewer-poster';
+                            viewerPoster.src = images[0] || '../../assets/images/ui/logosmall.png';
+                            viewerPoster.alt = `${game.name} 3D preview`;
 
-                            const posterImage = images[0] || '../../assets/images/ui/logosmall.png';
-                            modelViewer.setAttribute('poster', posterImage);
+                            const viewerOverlay = document.createElement('div');
+                            viewerOverlay.className = 'game-viewer-overlay';
 
-                            viewerSlide.appendChild(modelViewer);
+                            const viewerButton = document.createElement('button');
+                            viewerButton.type = 'button';
+                            viewerButton.className = 'game-viewer-open-button';
+                            viewerButton.textContent = 'Open 3D-Viewer';
+                            viewerButton.addEventListener('click', openViewerModal);
+
+                            viewerOverlay.appendChild(viewerButton);
+                            viewerSlide.appendChild(viewerPoster);
+                            viewerSlide.appendChild(viewerOverlay);
                             slideshowContainer.insertBefore(viewerSlide, slideshowContainer.querySelector('.prev'));
                         }
 
@@ -454,6 +458,36 @@
         function closeModal() {
             document.getElementById('myModal').style.display = "none";
             resetModalSwipeState();
+        }
+
+        function openViewerModal() {
+            if (!currentModelSrc) {
+                return;
+            }
+
+            const viewerModal = document.getElementById('viewerModal');
+            const viewerModel = document.getElementById('viewer-model');
+
+            if (!viewerModal || !viewerModel) {
+                return;
+            }
+
+            viewerModel.setAttribute('src', currentModelSrc);
+            viewerModal.classList.add('is-open');
+            viewerModal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeViewerModal() {
+            const viewerModal = document.getElementById('viewerModal');
+            const viewerModel = document.getElementById('viewer-model');
+
+            if (!viewerModal || !viewerModel) {
+                return;
+            }
+
+            viewerModal.classList.remove('is-open');
+            viewerModal.setAttribute('aria-hidden', 'true');
+            viewerModel.removeAttribute('src');
         }
 
         function changeModalImage(n) {
